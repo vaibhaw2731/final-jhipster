@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.myapp.yourapp.leave",
+    "packageFolder": "com/myapp/yourapp/leave",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "serviceDiscoveryType": false,
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "leave",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "buildTool": "maven",
+    "serverPort": "8082",
+    "jhipsterVersion": "6.5.1",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "MWE5YjcxMDI3MjJhNzk4M2EzOWQyMGNhMTdhNjE0NTVjZjMwNjM5ZDdkYzI1MWRmYmU0NGJlZjk1N2ZjNmZiOTZlZWI0NjdiYjBkNTA1ZDI3NDdmNDVhYzM4OTE2NTUzMjQ4Mjg2OTlmYTE5YjRkMGViYmM4MjczMmMxYTA5OTM=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "EmployeeLeave",
+    "LeaveRequest"
+  ]
+}
