@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: organization
-  namespace: avengers
+  namespace: shagun
 spec:
   replicas: 1
   selector:
@@ -44,7 +44,7 @@ spec:
                   name: jwt-secret
                   key: secret
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://organization-mysql.avengers.svc.cluster.local:3306/organization?useUnicode=true&characterEncoding=utf8&useSSL=false
+              value: jdbc:mysql://organization-mysql.shagun.svc.cluster.local:3306/organization?useUnicode=true&characterEncoding=utf8&useSSL=false
             - name: SPRING_SLEUTH_PROPAGATION_KEYS
               value: 'x-request-id,x-ot-span-context'
             - name: JAVA_OPTS

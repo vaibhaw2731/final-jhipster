@@ -30,7 +30,7 @@ You can deploy all your apps by running the below bash command:
 Use these commands to find your application's IP addresses:
 
 ```
-$ kubectl get svc ui -n avengers
+$ kubectl get svc ui -n shagun
 ```
 
 ## Scaling your deployments
@@ -38,7 +38,7 @@ $ kubectl get svc ui -n avengers
 You can scale your apps using
 
 ```
-$ kubectl scale deployment <app-name> --replicas <replica-count> -n avengers
+$ kubectl scale deployment <app-name> --replicas <replica-count> -n shagun
 ```
 
 ## zero-downtime deployments
@@ -46,7 +46,7 @@ $ kubectl scale deployment <app-name> --replicas <replica-count> -n avengers
 The default way to update a running app in kubernetes, is to deploy a new image tag to your docker registry and then deploy it using
 
 ```
-$ kubectl set image deployment/<app-name>-app <app-name>=<new-image>  -n avengers
+$ kubectl set image deployment/<app-name>-app <app-name>=<new-image>  -n shagun
 ```
 
 Using livenessProbes and readinessProbe allow you to tell Kubernetes about the state of your applications, in order to ensure availablity of your services. You will need minimum 2 replicas for every application deployment if you want to have zero-downtime deployed. This is because the rolling upgrade strategy first kills a running replica in order to place a new. Running only one replica, will cause a short downtime during upgrades.

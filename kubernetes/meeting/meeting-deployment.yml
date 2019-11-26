@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: meeting
-  namespace: avengers
+  namespace: shagun
 spec:
   replicas: 1
   selector:
@@ -46,7 +46,7 @@ spec:
             - name: SPRING_DATA_MONGODB_DATABASE
               value: meeting
             - name: SPRING_DATA_MONGODB_URI
-              value: 'mongodb://meeting-mongodb-0.meeting-mongodb.avengers:27017'
+              value: 'mongodb://meeting-mongodb-0.meeting-mongodb.shagun:27017'
             - name: SPRING_SLEUTH_PROPAGATION_KEYS
               value: 'x-request-id,x-ot-span-context'
             - name: JAVA_OPTS

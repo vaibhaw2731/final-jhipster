@@ -21,7 +21,7 @@ exports.config = {
 
   directConnect: true,
 
-  baseUrl: 'http://ui.avengers.35.188.51.171.nip.io/',
+  baseUrl: 'http://ui.shagun.35.188.51.171.nip.io/',
 
   framework: 'mocha',
 

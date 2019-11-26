@@ -6,7 +6,7 @@ logSummary(){
     echo ""
     echo "#####################################################"
     echo "Please find the below useful endpoints,"
-    echo "Gateway - http://ui.avengers.35.188.51.171.nip.io"
+    echo "Gateway - http://ui.shagun.35.188.51.171.nip.io"
     echo "Zipkin - http://zipkin.istio-system.35.188.51.171.nip.io"
     echo "Grafana - http://grafana.istio-system.35.188.51.171.nip.io"
     echo "Kiali - http://kiali.istio-system.35.188.51.171.nip.io"
@@ -14,7 +14,7 @@ logSummary(){
 }
 
 kubectl apply -f namespace.yml
-kubectl label namespace avengers istio-injection=enabled --overwrite=true
+kubectl label namespace shagun istio-injection=enabled --overwrite=true
 kubectl apply -f ui/
 kubectl apply -f organization/
 kubectl apply -f leave/
