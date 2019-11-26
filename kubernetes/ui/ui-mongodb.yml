@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: avengers
+  namespace: shagun
   name: ui-mongodb-config
 data:
   mongod.conf: |
@@ -15,7 +15,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: avengers
+  namespace: shagun
   name: ui-mongodb-init
 data:
   on-start.sh: |
@@ -154,7 +154,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: ui-mongodb
-  namespace: avengers
+  namespace: shagun
 spec:
   serviceName: ui-mongodb
   replicas: 1
@@ -307,7 +307,7 @@ metadata:
   annotations:
     service.alpha.kubernetes.io/tolerate-unready-endpoints: 'true'
   name: ui-mongodb
-  namespace: avengers
+  namespace: shagun
 spec:
   type: ClusterIP
   clusterIP: None

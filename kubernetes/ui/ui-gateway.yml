@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: ui-gateway
-  namespace: avengers
+  namespace: shagun
   labels:
     gateway: ui-gateway
     istio: ingressgateway
@@ -15,24 +15,24 @@ spec:
         name: http
         protocol: HTTP
       hosts:
-        - ui.avengers.35.188.51.171.nip.io
+        - ui.shagun.35.188.51.171.nip.io
     - port:
         number: 80
         name: http2
         protocol: HTTP2
       hosts:
-        - ui.avengers.35.188.51.171.nip.io
+        - ui.shagun.35.188.51.171.nip.io
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: ui-gw-virtualservice
-  namespace: avengers
+  namespace: shagun
   labels:
     service: ui-gw-virtualservice
 spec:
   hosts:
-    - ui.avengers.35.188.51.171.nip.io
+    - ui.shagun.35.188.51.171.nip.io
   gateways:
     - ui-gateway
   http:
